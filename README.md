@@ -1,5 +1,4 @@
-# RIF
-Pseudo-label supervised graph neural network unveils robust, fine-grained, interpretable spatial domains
+# Pseudo-label supervised graph neural network unveils robust, fine-grained, interpretable spatial domains
 
 ![](https://github.com/DDDoGGie/RIF/blob/main/figures/model.png)
 ## Overview
