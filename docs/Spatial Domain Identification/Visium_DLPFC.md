@@ -11,7 +11,6 @@ The datasets can be download from [https://github.com/LieberInstitute/spatialLIB
 ```python
 import os
 import warnings
-import warnings
 import argparse
 
 import scanpy as sc
