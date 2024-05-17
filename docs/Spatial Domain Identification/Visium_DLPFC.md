@@ -103,7 +103,7 @@ adata, graph = Riff.build_graph(args, adata)
 adata, num_classes
 ```
 
-```
+```python
 adata, _ = Riff.GSG_train(args, adata, graph, num_classes)
 
 adata.obs["pred1_refine"] = Riff.refine_label(adata, args.radius, key='cluster_pred1')
