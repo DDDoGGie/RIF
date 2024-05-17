@@ -1,1 +1,1 @@
-# Visium_DLPFC spatial domain identification
+# Visium_DLPFC spatial variabally gene detection
