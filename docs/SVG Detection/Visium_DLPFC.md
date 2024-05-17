@@ -2,4 +2,6 @@
 sort: 1
 ---
 
-# Visium_DLPFC spatial variabally gene detection
+# 10X Visium DLPFC
+
+Tutorial for spatial variablly genes on Visium DLPFC slice 151674
