@@ -177,7 +177,7 @@ def transfer_preprocess(args, adata_ref_list, adata_target):
 
     return adata_ref_list, adata_target, graph_ref_list, graph_target
 
-def GSG_train(args, adata, graph, num_classes):
+def train(args, adata, graph, num_classes):
     print("=============== Building model ===============")
     device = args.device if args.device >= 0 else "cpu"
     lr = args.lr

@@ -37,7 +37,7 @@ def build_args():
     parser.add_argument("--warm_up", type=int, default=50)
     parser.add_argument("--norm", type=str, default="batchnorm") 
 
-    # explain model parameters
+
     parser.add_argument("--sample_num", type=int, default=1, help="number of nodes for explaination")
     parser.add_argument("--optimizer", type=str, default="adam")
     parser.add_argument("--mask_act", type=str, default="sigmoid")
@@ -47,7 +47,7 @@ def build_args():
     parser.add_argument("--lr", type=float, default=0.001, help="learning rate for explaination")
     parser.add_argument("--weight_decay", type=float, default=1e-4, help="weight decay for evaluation")
      
-    # GSG parameter
+    # Riff parameter
     parser.add_argument("--adj_max_num", type=int, default=3)
     parser.add_argument("--feat_max_num", type=int, default=-1)
     parser.add_argument("--feat_min_num", type=int, default=10)
@@ -61,7 +61,7 @@ def build_args():
     parser.add_argument("--num_classes", type=int, default=7, help="The number of clusters")
     parser.add_argument("--output_folder", type=str, default="/home/wcy/code/pyFile/RIF/output/")
 
-    # read parameters
+
     args = parser.parse_args()
     return args
 

@@ -37,12 +37,12 @@ def build_args():
     parser.add_argument("--logging", action="store_true")
     parser.add_argument("--scheduler", action="store_true", default=True)
 
-    # for graph classification
+
     parser.add_argument("--pooling", type=str, default="mean")
     parser.add_argument("--deg4feat", action="store_true", default=False, help="use node degree as input feature")
     parser.add_argument("--batch_size", type=int, default=32)
 
-    # adjustable parameters
+
     parser.add_argument("--encoder", type=str, default="gin")
     parser.add_argument("--decoder", type=str, default="gin")
     parser.add_argument("--num_hidden", type=int, default=64, help="number of hidden units")
@@ -59,7 +59,7 @@ def build_args():
     parser.add_argument("--warm_up", type=int, default=50)
     parser.add_argument("--norm", type=str, default="batchnorm")
 
-    # GSG parameter
+    # Riff parameter
     parser.add_argument("--num_neighbors", type=int, default=7)
     parser.add_argument("--confidence_threshold", type=float, default=3e-3)
     parser.add_argument("--pre_aggregation", type=int, default=1)
@@ -94,7 +94,7 @@ def main(args):
         adata.obs[args.cluster_label] = adata.obs[args.cluster_label].astype('category')
     # graph construction and training
     adata, graph = Riff.build_graph(args, adata)
-    adata, _ = Riff.GSG_train(args, adata, graph, num_classes)
+    adata, _ = Riff.train(args, adata, graph, num_classes)
     
     adata.obs["pred1_refine"] = Riff.refine_label(adata, args.radius, key='cluster_pred1')
     adata.obs["pred2_refine"] = Riff.refine_label(adata, args.radius, key='cluster_pred2')
