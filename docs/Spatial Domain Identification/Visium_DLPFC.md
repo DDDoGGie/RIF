@@ -24,6 +24,7 @@ os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
 warnings.filterwarnings("ignore")
 ```
 
+## 1. Set parameters
 ```python
 parser = argparse.ArgumentParser(description="GAT")
 parser.add_argument("--seeds", type=int, default=0)
@@ -99,6 +100,7 @@ args
     Namespace(activation='elu', alpha_l=4, attn_drop=0.1, batch_size=32, beta_l=2, cluster_label='layer_guess', confidence_threshold=0.003, decoder='gin', deg4feat=False, device=4, drop_edge_rate=0.0, encoder='gin', folder_name='/home/wcy/code/datasets/10X/', in_drop=0.2, linear_prob=True, load_model=False, logging=False, loss_fn='weighted_mse', lr=0.001, lr_f=0.01, mask_gene_rate=0.8, max_epoch=200, min_pseudo_label=3000, negative_slope=0.2, norm='batchnorm', num_classes=12, num_features=3000, num_heads=4, num_hidden=64, num_layers=2, num_neighbors=7, num_out_heads=1, optimizer='adam', pooling='mean', pre_aggregation=[1, 1], radius=50, remask_rate=0.5, replace_rate=0.05, residual=False, sample_name='151674', save_model=False, scheduler=True, seeds=0, seq_tech='Visuim', top_num=10, use_cfg=False, warm_up=50, warmup_steps=-1, weight_decay=0.0002, weight_decay_f=0.0001)
 </details>
 
+## 2. Read dataset and preprocessing
 ```python
 data_path = os.path.join(args.folder_name, args.sample_name)
 adata = Riff.read_10X_Visium_with_label(data_path)
@@ -108,7 +110,6 @@ else:
     num_classes = adata.obs[args.cluster_label].nunique()
     adata.obs[args.cluster_label] = adata.obs[args.cluster_label].astype('category')
     
-# graph construction and training
 adata, graph = Riff.build_graph(args, adata)
 adata, num_classes
 ```
@@ -130,6 +131,8 @@ adata, num_classes
  7)
 </details>
 
+
+## 3. Model training and Robust spatial domain identification
 ```python
 adata, _ = Riff.GSG_train(args, adata, graph, num_classes)
 
@@ -161,6 +164,7 @@ sc.pl.spatial(adata, color=['layer_guess', new_key], title=['Manually Annotation
 ![](https://github.com/DDDoGGie/RIF/raw/gh-pages/docs/Figures/SDI/SDI_DLPFC_domain.png)
 
 
+## 4. Visuialize embedding by UMAP
 ```python
 sc.pp.neighbors(adata, use_rep='Riff_embedding')
 sc.tl.umap(adata)
@@ -169,6 +173,7 @@ sc.pl.umap(adata, color=['layer_guess', new_key], title=['Manually Annotation', 
 
 ![](https://github.com/DDDoGGie/RIF/raw/gh-pages/docs/Figures/SDI/SDI_DLPFC_umap.png)
 
+## 5. Trajectory inference by PAGA
 ```python
 sc.pp.neighbors(adata_reduce, use_rep='Riff_embedding')
 sc.tl.paga(adata_reduce, groups='layer_guess')
