@@ -1,5 +1,5 @@
 ---
-sort: 1
+sort: 2
 ---
 
 # 10X Visium sagittal Mouse Brain
