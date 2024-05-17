@@ -4,7 +4,10 @@ sort: 1
 
 # 10X Visium DLPFC
 
-Tutorial for spatial domain identification on Visium DLPFC slice 151674
+Tutorial for spatial domain identification on Visium DLPFC slice 151674.
+The datasets can be download from [https://github.com/LieberInstitute/spatialLIBD](https://github.com/LieberInstitute/spatialLIBD).
+
+
 ```python
 import os
 import warnings
