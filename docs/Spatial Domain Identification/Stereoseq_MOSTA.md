@@ -1,5 +1,5 @@
 ---
-sort: 5
+sort: 6
 ---
 
 # Stereo-seq MOB
