@@ -121,14 +121,21 @@ sc.pl.spatial(adata, color=['layer_guess', new_key], title=['Manually Annotation
               s=8, frameon=False)
 ```
 
+<img src='Figures/SDI/SDI_DLPFC_domain.png'>
+
+
 ```python
 sc.pp.neighbors(adata, use_rep='Riff_embedding')
 sc.tl.umap(adata)
 sc.pl.umap(adata, color=['layer_guess', new_key], title=['Manually Annotation', 'RIF'], frameon=False)
 ```
 
+<img src='Figures/SDI/SDI_DLPFC_umap.png'>
+
 ```python
 sc.pp.neighbors(adata_reduce, use_rep='Riff_embedding')
 sc.tl.paga(adata_reduce, groups='layer_guess')
 sc.pl.paga(adata_reduce, fontsize=14)
 ```
+
+<img src='Figures/SDI/SDI_DLPFC_paga.png'>
