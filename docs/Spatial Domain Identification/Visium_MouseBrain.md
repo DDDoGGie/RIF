@@ -155,7 +155,7 @@ adata, _ = Riff.train(args, adata, graph, num_classes)
 ```
 
 <details>
-<summary> <summary>
+<summary> </summary>
 =============== Building model =============== <br>
 =============== Start training =============== <br>
 ===================== Clustering ======================= <br>
