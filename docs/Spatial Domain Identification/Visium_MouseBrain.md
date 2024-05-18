@@ -1,5 +1,5 @@
 ---
-sort: 2
+sort: 1
 ---
 
 # 10X Visium sagittal Mouse Brain
@@ -125,10 +125,10 @@ adata, num_classes
 2024-05-17 15:10:04,803 - INFO - LD_LIBRARY_PATH: /usr/local/cuda/lib64 <br>
 2024-05-17 15:10:04,806 - INFO - Default options to initialize R: rpy2, --quiet, --no-save <br>
 2024-05-17 15:10:04,968 - INFO - R is already initialized. No need to initialize. <br>
-2024-05-17 15:10:04,979 - WARNING - R[write to console]:        <br>             __           __ 
-   ____ ___  _____/ /_  _______/ /_
-  / __ `__ \/ ___/ / / / / ___/ __/
- / / / / / / /__/ / /_/ (__  ) /_  
+2024-05-17 15:10:04,979 - WARNING - R[write to console]:        <br>             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp__&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp__    <br>
+&nbsp&nbsp&nbsp____ ___&nbsp&nbsp_____/ /_  _______/ /_  <br>
+&nbsp&nbsp/&nbsp__ `__ \/ ___/ / / / / ___/ __/  <br>
+&nbsp/ / / / / / /__/ / /_/ (__  ) /_    <br>
 /_/ /_/ /_/\___/_/\__,_/____/\__/   version 6.0.1  <br>
 Type 'citation("mclust")' for citing this R package in publications. <br>
 
