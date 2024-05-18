@@ -81,7 +81,7 @@ parser.add_argument("--sample_name", type=str, default="Puck_200127_15")
 parser.add_argument("--cluster_label", type=str, default= "")
 parser.add_argument("--folder_name", type=str, default="/home/wcy/code/datasets/SlideseqV2/")  
 parser.add_argument("--num_classes", type=int, default=12, help = "The number of clusters")
-parser.add_argument("--top_num", type=int, default=15)
+parser.add_argument("--top_num", type=int, default=20)
 parser.add_argument("--radius", type=int, default=15)
 
 args = parser.parse_args(args=['--sample_name', 'Puck_200127_15']) 
@@ -141,7 +141,7 @@ fitting ... <br>
 
 ## 3. Model training
 ```python
-adata, _ = Riff.GSG_train(args, adata, graph, num_classes)
+adata, _ = Riff.train(args, adata, graph, num_classes)
 ```
 <details>
 <summary> </summary>
@@ -155,7 +155,7 @@ adata, _ = Riff.GSG_train(args, adata, graph, num_classes)
 
 ## 4. Robust spatial domain identification
 ```python
-adata.obs["combined"] = Riff.HBGF_fast(adata, ["cluster_pred1", "cluster_pred2"], pred_class=12, combined_class=12, top_num=20)
+adata.obs["combined"] = Riff.HBGF_fast(adata, ["cluster_pred1", "cluster_pred2"], pred_class=num_classes, combined_class=num_classes, top_num=args.top_num)
 adata.obs['combined'] = adata.obs['combined'].astype(int).astype('category')
 adata.obsm['spatial'] = (-1)*adata.obsm["spatial"]
 sc.pl.embedding(adata, basis='spatial', color=['combined'], title=['RIF'], s=8, frameon=False, show=False)
