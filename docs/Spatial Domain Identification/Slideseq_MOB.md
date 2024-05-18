@@ -4,7 +4,7 @@ sort: 5
 
 # Slide-seq V2 MOB
 
-Tutorial for spatial domain identification on Slide-seq V2 MOB. The raw dataset can be downloaded from [https://stagate.readthedocs.io/en/latest/T3_Slide-seqV2.html](https://stagate.readthedocs.io/en/latest/T3_Slide-seqV2.html). This tutorial used the STAGATE filtered data, which can be downloaded from [https://stagate.readthedocs.io/en/latest/T3_Slide-seqV2.html](https://stagate.readthedocs.io/en/latest/T3_Slide-seqV2.html).
+Tutorial for spatial domain identification on Slide-seq V2 MOB. The raw dataset can be downloaded from [https://singlecell.broadinstitute.org/single_cell/study/SCP815/highly-sensitive-spatial-transcriptomics-at-near-cellular-resolution-with-slide-seqv2#study-summary](https://singlecell.broadinstitute.org/single_cell/study/SCP815/highly-sensitive-spatial-transcriptomics-at-near-cellular-resolution-with-slide-seqv2#study-summary). This tutorial used the STAGATE filtered data, which can be downloaded from [https://stagate.readthedocs.io/en/latest/T3_Slide-seqV2.html](https://stagate.readthedocs.io/en/latest/T3_Slide-seqV2.html).
 
 
 ```python
