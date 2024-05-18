@@ -142,11 +142,11 @@ fitting ... <br>
 
 <details>
 <summary> </summary>
-(AnnData object with n_obs × n_vars = 3798 × 3000
-     obs: 'annot_type', 'fine_annot_type', 'imagecol', 'imagerow', 'pseudo_label', 'uncertainty', 'pseudo_label_scaled', 'uncertainty_scaled'
-     var: 'gene_ids', 'feature_types', 'genome', 'n_cells', 'highly_variable', 'highly_variable_rank', 'means', 'variances', 'variances_norm', 'mean', 'std'
-     uns: 'spatial', 'hvg', 'log1p'
-     obsm: 'spatial', 'emb_pca', 'mclust_prob', 'mclust_prob_scaled',
+(AnnData object with n_obs × n_vars = 3798 × 3000 <br>
+     obs: 'annot_type', 'fine_annot_type', 'imagecol', 'imagerow', 'pseudo_label', 'uncertainty', 'pseudo_label_scaled', 'uncertainty_scaled' <br>
+     var: 'gene_ids', 'feature_types', 'genome', 'n_cells', 'highly_variable', 'highly_variable_rank', 'means', 'variances', 'variances_norm', 'mean', 'std' <br>
+     uns: 'spatial', 'hvg', 'log1p' <br>
+     obsm: 'spatial', 'emb_pca', 'mclust_prob', 'mclust_prob_scaled', <br>
  20)
 </details>
 
