@@ -189,7 +189,7 @@ sc.pl.umap(adata_combine, color=['batch', 'name'], title=['Batch', 'cluster'], s
 <details>
 <summary> </summary>
 [ &lt AxesSubplot: title={'center': 'Batch'}, xlabel='UMAP1', ylabel='UMAP2' &gt, <br>
- &lt AxesSubplot: title={'center': 'cluster'}, xlabel='UMAP1', ylabel='UMAP2'&gt <br>
+ &lt AxesSubplot: title={'center': 'cluster'}, xlabel='UMAP1', ylabel='UMAP2'&gt ] <br>
 </details>
 
 ![](https://github.com/DDDoGGie/RIF/raw/gh-pages/docs/Figures/Transfer/Transfer_MOB_batch.png)
