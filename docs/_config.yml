@@ -1,6 +1,6 @@
-title: Your project name
+title: RIF
 lang: en
-description: a catchy description for your project
+description: Pseudo-label supervised graph neural network unveils robust, interpretable, fine-grained spatial domains
 
 remote_theme: rundocs/jekyll-rtd-theme
 
